@@ -233,7 +233,7 @@ export default class NodeCreationDialog extends PureComponent {
     }
 
     renderElement(elementName, element, isFirst) {
-        const {validationErrors, isDirty} = this.state;
+        const {validationErrors, isDirty} = this.state; //TODO: nicole - finde state
         const validationErrorsForElement = isDirty ? $get(elementName, validationErrors) : [];
         const options = $set('autoFocus', isFirst, Object.assign({}, $get('ui.editorOptions', element)));
 
